@@ -126,7 +126,7 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
   Black_Night: {
     id: "10",
     images: [
-      '/Black_Night/Black_Night_1.jpg',
+      '/Black_Night/Black_Night_1.JPG',
       '/Black_Night/Black_Night_2.jpg',
       '/Black_Night/Black_Night_3.jpg',
       '/Black_Night/Black_Night_4.jpg',
