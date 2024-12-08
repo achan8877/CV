@@ -144,6 +144,7 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
       '/GigOff/GigOff_4.jpg',
       '/GigOff/GigOff_5.jpg',
       '/GigOff/GigOff_6.jpg',
+      '/GigOff/GigOff_7.png'
     ],
     category: 'LiveShow',
   }
