@@ -138,12 +138,12 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
   GigOff: {
     id: "11",
     images: [
-      '/Gigoff/Gigoff_1.jpg',
-      '/Gigoff/Gigoff_2.jpg',
-      '/Gigoff/Gigoff_3.jpg',
-      '/Gigoff/Gigoff_4.jpg',
-      '/Gigoff/Gigoff_5.jpg',
-      '/Gigoff/Gigoff_6.jpg',
+      '/GigOff/GigOff_1.jpg',
+      '/GigOff/GigOff_2.jpg',
+      '/GigOff/GigOff_3.jpg',
+      '/GigOff/GigOff_4.jpg',
+      '/GigOff/GigOff_5.jpg',
+      '/GigOff/GigOff_6.jpg',
     ],
     category: 'LiveShow',
   }
