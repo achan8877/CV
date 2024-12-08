@@ -1,0 +1,45 @@
+
+  .left-timeline {
+    float: left;
+    width: 85%; /* Adjust as needed */
+  }
+  
+  .right-timeline {
+    float: right;
+    width: 85%; /* Adjust as needed */
+  }
+  
+  .vertical-timeline-custom-line::before {
+    left: auto;
+    right: 80%; /* Adjust line position */
+  }
+  
+  .timeline-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .timeline-content {
+    flex: 1;
+  }
+  
+  .timeline-image {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    margin-left: 20px; /* Space between the timeline and the image */
+  }
+  .scroll-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    max-height: 80vh; /* Adjust the height as needed */
+    max-width: 100%; /* Adjust the width as needed */
+  }
+  
+  .timeline-image {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+  }
+  
+  
