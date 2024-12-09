@@ -51,27 +51,26 @@ const About = () => {
       </motion.div>
 
       <div className='mt-20 flex flex-col text-left'>
-        <h3 className='text-xl font-bold mb-4 text-left'>Drama</h3>
+        <h3 className='text-xl font-bold mb-4 text-center'>Drama</h3>
         <VerticalTimeline  className="vertical-timeline-custom-line left-timeline">
           {drama.map((event, index) => (
             <EventCard key={`drama-${index}`} event={event} position="left" />
           ))}
         </VerticalTimeline>
 
-        <h3 className='text-xl font-bold mt-10 mb-4'>Live</h3>
+        <h3 className='text-xl text-center font-bold mt-10 mb-4'>Live</h3>
         <VerticalTimeline  className="vertical-timeline-custom-line right-timeline">
           {live.map((event, index) => (
             <EventCard key={`live-${index}`} event={event} position="right" />
           ))}
         </VerticalTimeline>
 
-        <h3 className='text-xl font-bold mt-10 mb-4'>Assistant</h3>
+        <h3 className='text-xl text-center font-bold mt-10 mb-4'>Assistant</h3>
         <VerticalTimeline  className="vertical-timeline-custom-line left-timeline">
           {assistant.map((event, index) => (
             <EventCard key={`assistant-${index}`} event={event} position="left" />
           ))}
         </VerticalTimeline>
-        <img src={lightbulb} alt="Decorative" className="timeline-image" />
       </div>
     </>
   );
