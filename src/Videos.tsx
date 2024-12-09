@@ -8,13 +8,13 @@ const Videos: React.FC = () => (
       <VideoCard
         title="Lighting Design Demo"
         description="A showcase of lighting design techniques"
-        videoUrl="/videos/demo1.mp4"
+        videoUrl="/assets/video/CUHKJP.mp4"
         projectId="demo1"
       />
       <VideoCard
         title="Theatrical Lighting"
         description="Highlights from a recent theatrical production"
-        videoUrl="/videos/theatrical1.mp4"
+        videoUrl="/assets/video/.mp4"
         projectId="theatrical1"
       />
       <VideoCard
@@ -23,7 +23,6 @@ const Videos: React.FC = () => (
         videoUrl="/videos/concert1.mp4"
         projectId="concert1"
       />
-      {/* 添加更多視頻卡片 */}
     </div>
   </div>
 );

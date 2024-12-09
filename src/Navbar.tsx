@@ -14,7 +14,6 @@ const Navbar: React.FC = () => {
           onClick={() => window.scrollTo(0, 0)}
         >
           <img src={portfolio} alt="logo" className="w-15 h-12 object-contain" />
-          <p className="text-[22px] font-bold flex">Ming</p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-12">
           {navLinks.map((link) => (

@@ -2,6 +2,10 @@
  import { title } from "process";
 import lightbulb from "../assets/lightbulb.png";
 import HKBU from '../assets/video/HKBU.mp4';
+import CUHKJP from '../assets/video/CUHKJP.mp4'
+import sc3part2 from '../assets/video/sc3part2.mp4'
+import Sc4 from '../assets/video/Sc4.MP4'
+import YOASOBITW from '../assets/video/YOASOBITW.mp4'
   export const navLinks = [
     {
       id: "About",
@@ -16,6 +20,7 @@ import HKBU from '../assets/video/HKBU.mp4';
       id: "Gallery",
       title: "Gallery",
     }
+    
 
   ];
   
@@ -124,9 +129,12 @@ import HKBU from '../assets/video/HKBU.mp4';
     }
   ]
 export const videos = [
-  { id: '1', title: 'Video 1', description: 'Description for Video 1', videoUrl: HKBU },
-  { id: '2', title: 'Video 2', description: 'Description for Video 2', videoUrl: 'https://example.com/video2.mp4' },
-  { id: '3', title: 'Video 3', description: 'Description for Video 3', videoUrl: 'https://example.com/video3.mp4' },
+  { id: '1', title: 'CUHKJP', description: 'Drama Highlights', videoUrl: CUHKJP },
+  { id: '2', title: 'HKBU', description: 'Music Shows', videoUrl: HKBU},
+  { id: '3', title: 'sc3part2', description: 'preplotting for drama shows', videoUrl: sc3part2 },
+  { id: '4', title: 'Sc4', description: 'preplotting for drama shows', videoUrl: Sc4 },
+  { id: '5', title: 'YOASOBITW', description: 'timecode demo', videoUrl: YOASOBITW },
+
 ]
 export const projects = [
   {
@@ -146,7 +154,7 @@ export const projects = [
   {
     title: "備忘錄",
     description: "新亞劇社周年公演2023",
-    imageUrl: "/cuhkNADCAp24/cuhkNADCAp24_1.jpg",
+    imageUrl: "/cuhkNADCAp24/cuhkNADCAp24_1.JPG",
     projectId: "cuhkNADCAp24",
     category: "Drama",
   },
@@ -188,14 +196,14 @@ export const projects = [
   {
     title: "三隻小豬狂想曲",
     description: "原創擊樂音樂劇《三隻小豬狂想曲》",
-    imageUrl: "Three_Pigs/Three_Pigs_1.jpg",
+    imageUrl: "Three_Pigs/Three_Pigs_1.JPG",
     projectId: "Three_Pigs",
     category: "Drama",
   },
   {
     title: "黑夜不再來",
     description: "2024集戲綠色教育劇場",
-    imageUrl: "/Black_night/Black_night_1.jpg",
+    imageUrl: "/Black_night/Black_night_1.JPG",
     projectId: "Black_Night",
     category: "Drama",
   },
