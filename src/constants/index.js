@@ -196,14 +196,14 @@ export const projects = [
   {
     title: "三隻小豬狂想曲",
     description: "原創擊樂音樂劇《三隻小豬狂想曲》",
-    imageUrl: "Three_Pigs/Three_Pigs_1.JPG",
+    imageUrl: "/Three_Pigs/Three_Pigs_1.jpg",
     projectId: "Three_Pigs",
     category: "Drama",
   },
   {
     title: "黑夜不再來",
     description: "2024集戲綠色教育劇場",
-    imageUrl: "/Black_night/Black_night_1.JPG",
+    imageUrl: "/Black_Night/Black_Night_1.JPG",
     projectId: "Black_Night",
     category: "Drama",
   },
