@@ -8,7 +8,14 @@ const VideoGallery: React.FC = () => {
 
   return (
     <div className="video-gallery">
+      <button 
+        className="absolute left-4 px-4 py-2 text-black hover:text-white rounded underline"
+        onClick={() => navigate('/gallery')} // Navigate back to gallery
+      >
+        Back to Gallery
+      </button>
       <h1 className="text-3xl font-bold text-center my-8">My Video Collection</h1>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
         {videos.map((video) => (
           <div

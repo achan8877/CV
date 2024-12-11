@@ -10,6 +10,12 @@ const GalleryNavigation: React.FC = () => {
 
   return (
     <div className="p-4 flex flex-col items-center">
+      <button
+        onClick={() => navigate(`/`)}
+        className="absolute left-4 px-4 py-2 text-black hover:text-white rounded underline"
+      >
+        Back to Home
+      </button>
       <h2 className="text-2xl font-bold mb-4 text-center">Choose a Category</h2>
       <div className="flex space-x-4">
         <button

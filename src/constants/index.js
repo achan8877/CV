@@ -32,6 +32,12 @@ import YoasobiTw from '../assets/video/YoasobiTw.png'
 
   export const drama = [
     {
+      title: "農圃劇團《念念不忘》",
+      date: "12-13/12/2024",
+      icon: lightbulb,
+
+    },
+    {
       title: "集戲綠色教育劇場《黑夜不再來》",
       date: "7-8/9/2024",
       icon: lightbulb,
@@ -43,7 +49,12 @@ import YoasobiTw from '../assets/video/YoasobiTw.png'
       icon: lightbulb,
 
     },
-        {
+    {
+      title: "Theatre Formula《自我放戲訓練班》畢業展演",
+      date: "17-18/8/2024",
+      icon: lightbulb,
+    },
+    {
       title: "影話戲 Cinematic Theatre《歡迎來到天樂村》",
       date: "27-30/6/2024",
       icon: lightbulb,
@@ -80,7 +91,7 @@ import YoasobiTw from '../assets/video/YoasobiTw.png'
 
     },    
     {
-      title: "新亞劇社中大劇賽《The world of orphans》",
+      title: "新亞劇社中大劇賽《The World of Orphans》",
       date: "3/11/2022",
       icon: lightbulb,
 
@@ -218,7 +229,14 @@ export const projects = [
     imageUrl: "/GigOff/GigOff_1.jpg",
     projectId: "GigOff",
     category: "LiveShow",  
-  }
+  },
+  {
+    title: "Cosmic Symphony",
+    description: "LiveShow for HKBU BMus at the HKBU",
+    imageUrl: "/BMUS_Stage/BMUS_Stage_1.jpg",
+    projectId: "BMUS_Stage",
+    category: "LiveShow", 
+  },
 ];
 
 

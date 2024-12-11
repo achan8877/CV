@@ -16,8 +16,8 @@ const Gallery: React.FC = () => {
         {/* Add a button on the left */}
         <button
           onClick={handleButtonClick}
-          className="absolute left-4 px-4 py-2  text-black hover:text-white rounded  underline">
-          Back to Home
+          className="absolute font-bold left-4 px-4 py-2  text-black hover:text-white rounded  underline">
+          Back to Category
         </button>
         <h1 className="text-3xl font-bold">My Lighting Design Gallery</h1>
       </div>

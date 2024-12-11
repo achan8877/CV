@@ -51,6 +51,9 @@ const About = () => {
       </motion.div>
 
       <div className='mt-20 flex flex-col text-left'>
+        <p className="text-black text-center mb-8 text-2xl font-bold">
+          近年演出經驗
+        </p>
         <h3 className='text-xl font-bold mb-4 text-center'>Drama</h3>
         <VerticalTimeline  className="vertical-timeline-custom-line left-timeline">
           {drama.map((event, index) => (

@@ -1,4 +1,4 @@
-const imageFolders: Record<string, { id:string;images: string[]; category: 'Drama' | 'LiveShow' }> = {
+const imageFolders: Record<string, { id:string;images: string[];title: string; category: 'Drama' | 'LiveShow' }> = {
   cuhkdramacomp: {
     id: "1",
     images: [
@@ -10,6 +10,7 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
       '/cuhkdramacomp/cuhkdramacomp6.jpg',
     ],
     category: 'Drama',
+    title:"The World of Orphans"
   },
   cuhkJP23: {
     id: "2",
@@ -20,6 +21,7 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
       '/cuhkJP23/cuhkJP23_4.jpg',
     ],
     category: 'Drama',
+    title:"看一場 下不完的雪"
   },
   cuhkNADCAp24: {
     id: "3",
@@ -35,6 +37,7 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
       '/cuhkNADCAp24/cuhkNADCAp24_9.JPG',
     ],
     category: 'Drama',
+    title:"備忘錄"
   },
   linguAp24: {
     id: "4",
@@ -46,7 +49,9 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
       '/linguAp24/lingu5Ap24.jpg',
       '/linguAp24/lingu6Ap24.jpg',
     ],
+    
     category: 'Drama',
+    title: "日出"
   },
   cuhkJP24: {
     id: "5",
@@ -59,6 +64,7 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
       '/cuhkJP24/cuhkJP24_6.jpg',
     ],
     category: 'Drama',
+    title: "圓夢空間"
   },
   Mine_Theatre: {
     id: "6",
@@ -77,6 +83,7 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
       '/Mine_Theatre/Mine_Theatre_12.jpg',
     ],
     category: 'Drama',
+    title: "霾"
   },
   Cinemic: {
     id: "7",
@@ -92,6 +99,7 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
       '/Cinemic/Cinemic_9.jpg',
     ],
     category: 'Drama',
+    title: "歡迎來到天樂村"
   },
   Theatre_Formula: {
     id: "8",
@@ -107,6 +115,7 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
       '/Theatre_Formula/Theatre_Formula_9.jpg',
     ],
     category: 'Drama',
+    title: "《自我放戲訓練班》畢業展演"
   },
   Three_Pigs: {
     id: "9",
@@ -122,6 +131,7 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
       '/Three_Pigs/Three_Pigs_9.JPG',
     ],
     category: 'Drama',
+    title:"三隻小豬狂想曲"
   },
   Black_Night: {
     id: "10",
@@ -134,6 +144,7 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
       '/Black_Night/Black_Night_6.jpg',
     ],
     category: 'Drama',
+    title: "黑夜不再來"
   },
   GigOff: {
     id: "11",
@@ -146,6 +157,20 @@ const imageFolders: Record<string, { id:string;images: string[]; category: 'Dram
       '/GigOff/GigOff_6.jpg',
     ],
     category: 'LiveShow',
+    title: "GigOff"
+  },
+  BMUS_Stage: {
+    id: "12",
+    images: [
+      '/BMUS_Stage/BMUS_Stage_1.jpg',
+      '/BMUS_Stage/BMUS_Stage_2.jpg',
+      '/BMUS_Stage/BMUS_Stage_3.jpg',
+      '/BMUS_Stage/BMUS_Stage_4.jpg',
+      '/BMUS_Stage/BMUS_Stage_5.jpg',
+      '/BMUS_Stage/BMUS_Stage_6.jpg',
+    ],
+    category: "LiveShow", 
+    title: "Cosmic Symphony Credit: instagram @yasenwong"
   }
 };
 

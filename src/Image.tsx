@@ -8,7 +8,7 @@ const Image: React.FC = () => {
   const navigate = useNavigate();
   const project = imageFolders[projectId || ''];
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
+  const title = project?.title || 'Unknown';
   const images = project?.images || [];
   const projectCategory = project?.category || 'Unknown';
 
@@ -20,14 +20,14 @@ const Image: React.FC = () => {
     <div className="p-4">
       {/* Back Button */}
       <button
-        className="mb-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        className="absolute left-4 px-4 py-2 text-black hover:text-white rounded underline"
         onClick={() => navigate(`/Gallery/${category}`)} // Navigate back to the category
       >
         Back to {category} Gallery
       </button>
 
-      <h2 className="text-2xl font-bold mb-4">
-        {projectCategory} - Project {projectId}
+      <h2 className="text-2xl font-bold mb-4 text-center">
+        {projectCategory} - {title}
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {images.map((image, index) => (
