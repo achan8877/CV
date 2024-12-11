@@ -157,7 +157,7 @@ const imageFolders: Record<string, { id:string;images: string[];title: string; c
       '/GigOff/GigOff_6.jpg',
     ],
     category: 'LiveShow',
-    title: "GigOff"
+    title: "GigOff Credit: instagram @waikit_shashin._"
   },
   BMUS_Stage: {
     id: "12",
