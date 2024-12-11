@@ -137,11 +137,11 @@ const imageFolders: Record<string, { id:string;images: string[];title: string; c
     id: "10",
     images: [
       '/Black_Night/Black_Night_1.JPG',
-      '/Black_Night/Black_Night_2.jpg',
-      '/Black_Night/Black_Night_3.jpg',
-      '/Black_Night/Black_Night_4.jpg',
-      '/Black_Night/Black_Night_5.jpg',
-      '/Black_Night/Black_Night_6.jpg',
+      '/Black_Night/Black_Night_2.JPG',
+      '/Black_Night/Black_Night_3.JPG',
+      '/Black_Night/Black_Night_4.JPG',
+      '/Black_Night/Black_Night_5.JPG',
+      '/Black_Night/Black_Night_6.JPG',
     ],
     category: 'Drama',
     title: "黑夜不再來"
