@@ -1,15 +1,20 @@
 
  import { title } from "process";
 import lightbulb from "../assets/lightbulb.png";
-import HKBU from '../assets/video/HKBU.mp4';
+import HKBU_BMus from '../assets/video/HKBU_BMus.mp4';
 import CUHKJP24 from '../assets/video/CUHKJP24.mp4'
 import sc3part2 from '../assets/video/sc3part2.mp4'
 import Sc4 from '../assets/video/Sc4.MP4'
 import YOASOBITW from '../assets/video/YOASOBITW.mp4'
+import CUHKJP24Img from '../assets/video/CUHKJP24Img.png'
+import HKBU_BMusImg from '../assets/video/HKBU_BMusImg.png'
+import ThreePigsImg from '../assets/video/ThreePigsImg.png'
+import Sc4Img from '../assets/video/Sc4Img.png'
+import YoasobiTw from '../assets/video/YoasobiTw.png'
   export const navLinks = [
     {
-      id: "About",
-      title: "About",
+      id: "Experience",
+      title: "Experience",
   
     },
     {
@@ -51,7 +56,7 @@ import YOASOBITW from '../assets/video/YOASOBITW.mp4'
 
     },
     {
-      title: "大專戲劇節匯演&港深澳大學生戲劇交流《圓夢空間》",
+      title: "大專戲劇節匯演《圓夢空間》",
       date: "31/3/2024 & 4-5/4/2024",
       icon: lightbulb,
 
@@ -69,7 +74,7 @@ import YOASOBITW from '../assets/video/YOASOBITW.mp4'
 
     }, 
     {
-      title: "大專戲劇節匯演&港深澳大學生戲劇交流《看一場 下不完的雪》",
+      title: "大專戲劇節匯演《看一場 下不完的雪》",
       date: "5-6/4/2023 & 10/4/2023",
       icon: lightbulb,
 
@@ -129,11 +134,11 @@ import YOASOBITW from '../assets/video/YOASOBITW.mp4'
     }
   ]
 export const videos = [
-  { id: '1', title: 'CUHKJP24', description: 'JP24 Highlights', videoUrl: CUHKJP24 },
-  { id: '2', title: 'HKBU', description: 'Music Shows', videoUrl: HKBU},
-  { id: '3', title: 'Three Pigs sc3part2', description: 'preplotting for drama shows', videoUrl: sc3part2 },
-  { id: '4', title: 'Three Pigs Scene 4', description: 'preplotting for drama shows', videoUrl: Sc4 },
-  { id: '5', title: 'YOASOBITW', description: 'timecode demo', videoUrl: YOASOBITW },
+  { id: '1', title: 'CUHKJP24', description: 'JP24 Highlights', videoUrl: CUHKJP24, image: CUHKJP24Img},
+  { id: '2', title: 'HKBU_BMus', description: 'Music Shows Hightlight', videoUrl: HKBU_BMus, image: HKBU_BMusImg},
+  { id: '3', title: 'Three Pigs Rhapsody Scene 3', description: 'Preplotting demo', videoUrl: sc3part2, image: ThreePigsImg },
+  { id: '4', title: 'Three Pigs Rhapsody Scene 4', description: 'Preplotting demo 2', videoUrl: Sc4, image: Sc4Img },
+  { id: '5', title: 'YOASOBI Timecode Relight', description: 'Timecode demo using Tsuen Wan Cultural Activities Hall', videoUrl: YOASOBITW, image: YoasobiTw },
 
 ]
 export const projects = [
@@ -167,7 +172,7 @@ export const projects = [
   },
   {
     title: "圓夢空間",
-    description: "大專戲劇節匯演&港深澳大學生戲劇交流《圓夢空間》",
+    description: "大專戲劇節匯演&港深澳大學生戲劇交流",
     imageUrl: "/cuhkJP24/cuhkJP24_1.jpg",
     projectId: "cuhkJP24",
     category: "Drama",
@@ -181,7 +186,7 @@ export const projects = [
   },
   {
     title: "歡迎來到天樂村",
-    description: "影話戲 Cinematic Theatre《歡迎來到天樂村》",
+    description: "影話戲 Cinematic Theatre",
     imageUrl: "/Cinemic/Cinemic_1.jpg",
     projectId: "Cinemic",
     category: "Drama",
@@ -195,7 +200,7 @@ export const projects = [
   },
   {
     title: "三隻小豬狂想曲",
-    description: "原創擊樂音樂劇《三隻小豬狂想曲》",
+    description: "原創擊樂音樂劇",
     imageUrl: "/Three_Pigs/Three_Pigs_1.jpg",
     projectId: "Three_Pigs",
     category: "Drama",
@@ -209,7 +214,7 @@ export const projects = [
   },
   {
     title: "GigOff",
-    description: "Mine theatre 編作劇場",
+    description: "LiveShow in TaiPo Spot",
     imageUrl: "/GigOff/GigOff_1.jpg",
     projectId: "GigOff",
     category: "LiveShow",  

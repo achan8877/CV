@@ -13,7 +13,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = memo(({ title, description, imageUrl, projectId, category }) => {
   const navigate = useNavigate();
-  const { category: currentCategory } = useParams(); // Use useParams for better reliability
+  const { category: currentCategory } = useParams();
 
   console.log('Current Category:', currentCategory);
 
@@ -23,29 +23,30 @@ const ProjectCard: React.FC<ProjectCardProps> = memo(({ title, description, imag
 
   if (currentCategory?.trim().toLowerCase() !== category.trim().toLowerCase()) {
     console.log('Category does not match. Skipping rendering.');
-    return null; // Skip rendering if the category doesn't match
+    return null;
   }
 
   return (
-    <div className="flex justify-center items-center">
-      <div
-        onClick={handleClick}
-        className="border rounded-lg overflow-hidden shadow-lg cursor-pointer max-w-xs"
-        style={{
-          backgroundImage: `url(${light})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '200px',
-          position: 'relative',
-        }}
-      >
-        <LazyLoadComponent>
-          <img src={imageUrl} alt={title} className="w-full h-auto max-h-32" />
-        </LazyLoadComponent>
-        <div className="p-2 bg-white h-full bg-opacity-30">
-          <h2 className="text-md font-semibold">{title}</h2>
-          <p className="text-black-700 z-10 text-sm font-medium tracking-wide">{description}</p>
-        </div>
+    <div
+      onClick={handleClick}
+      className="relative border rounded-lg overflow-hidden shadow-lg cursor-pointer group"
+      style={{
+        height: '300px', // Fixed height for equal-sized grid items
+      }}
+    >
+      {/* Background image */}
+      <LazyLoadComponent>
+        <img
+          src={imageUrl}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
+      </LazyLoadComponent>
+
+      {/* Text overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h2 className="text-xl font-bold">{title}</h2>
+        <p className="text-sm font-medium mt-2">{description}</p>
       </div>
     </div>
   );

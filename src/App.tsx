@@ -8,7 +8,7 @@ const LazyHome = React.lazy(() => import('./Home'));
 const LazyGallery = React.lazy(() => import('./Gallery'));
 const LazyImage = React.lazy(() => import('./Image'));
 const LazyVideoGallery = React.lazy(() => import('./VideoGallery'));
-const LazyAbout = React.lazy(() => import('./About'));
+const LazyExperience = React.lazy(() => import('./Experience'));
 const LazyVideos = React.lazy(() => import('./Videos'));
 const LazyVideoPlayerPage = React.lazy(() => import('./VideoPlayerPage'));
 const LazyGalleryNavigation = React.lazy(() => import('./GalleryNavigation'));
@@ -47,7 +47,7 @@ const App: React.FC = () => {
             <Route path="/Gallery/:category/:projectId" element={<LazyImage />} />
             <Route path="/Video" element={<LazyVideoGallery />} /> {/* 不需要傳遞空屬性 */}
             <Route path="/video/:id" element={<LazyVideoPlayerPage />} />
-            <Route path="/about" element={<LazyAbout />} />
+            <Route path="/Experience" element={<LazyExperience />} />
           </Routes>
         </Suspense>
       </div>

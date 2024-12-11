@@ -16,11 +16,10 @@ const Gallery: React.FC = () => {
         {/* Add a button on the left */}
         <button
           onClick={handleButtonClick}
-          className="absolute left-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-        >
+          className="absolute left-4 px-4 py-2  text-black hover:text-white rounded  underline">
           Back to Home
         </button>
-        <h1 className="text-3xl font-bold">My Lighting Design Projects</h1>
+        <h1 className="text-3xl font-bold">My Lighting Design Gallery</h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
         {projects.map((project) => (
