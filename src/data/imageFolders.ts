@@ -6,7 +6,7 @@ const imageFolders: Record<string, { id:string;images: string[];title: string; c
       '/cuhkdramacomp/cuhkdramacomp2.jpg',
       '/cuhkdramacomp/cuhkdramacomp3.jpg',
       '/cuhkdramacomp/cuhkdramacomp4.jpg',
-      '/cuhkdramacomp/cuhkdramacomp5.jpg',
+      '/cuhkdramacomp/cuhkdramacomp5.1.jpg',
       '/cuhkdramacomp/cuhkdramacomp6.jpg',
     ],
     category: 'Drama',
