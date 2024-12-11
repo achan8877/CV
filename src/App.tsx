@@ -46,7 +46,7 @@ const App: React.FC = () => {
             <Route path = "/Gallery/:category" element = {<LazyGallery/>}/>
             <Route path="/Gallery/:category/:projectId" element={<LazyImage />} />
             <Route path="/Video" element={<LazyVideoGallery />} /> {/* 不需要傳遞空屬性 */}
-            <Route path="/video/:id" element={<LazyVideoPlayerPage />} />
+            <Route path="/Video/:id" element={<LazyVideoPlayerPage />} />
             <Route path="/Experience" element={<LazyExperience />} />
           </Routes>
         </Suspense>

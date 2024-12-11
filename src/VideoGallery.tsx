@@ -10,9 +10,9 @@ const VideoGallery: React.FC = () => {
     <div className="video-gallery">
       <button 
         className="absolute left-4 px-4 py-2 text-black hover:text-white rounded underline"
-        onClick={() => navigate('/gallery')} // Navigate back to gallery
+        onClick={() => navigate('/')} // Navigate back to gallery
       >
-        Back to Gallery
+        Back to Home
       </button>
       <h1 className="text-3xl font-bold text-center my-8">My Video Collection</h1>
 
