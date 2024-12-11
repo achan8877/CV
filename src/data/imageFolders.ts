@@ -58,8 +58,8 @@ const imageFolders: Record<string, { id:string;images: string[];title: string; c
     images: [
       '/cuhkJP24/cuhkJP24_1.jpg',
       '/cuhkJP24/cuhkJP24_2.jpg',
-      '/cuhkJP24/cuhkJP24_3.jpg',
-      '/cuhkJP24/cuhkJP24_4.jpg',
+      '/cuhkJP24/cuhkJP24_3.1.jpg',
+      '/cuhkJP24/cuhkJP24_4.1.JPG',
       '/cuhkJP24/cuhkJP24_5.jpg',
       '/cuhkJP24/cuhkJP24_6.jpg',
     ],
