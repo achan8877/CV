@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         <section className="px-10 sm:px-20 text-center">
           <h1 className="text-4xl font-bold">Welcome to My Portfolio</h1>
           <p className="mt-4 text-lg">
-            Explore and learn more about my work.
+            Explore and learn more about my work. (This website only supports Windows and Mac)
           </p>
           <div className="flex justify-center gap-4 mt-6">
             <a href="https://drive.google.com/drive/folders/1PlgcoCl4gMtOtGuz7DRb4UygAhmoLB08?usp=sharing" target="_blank" rel="noopener noreferrer">
