@@ -48,14 +48,7 @@ const About = () => {
   };
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          My Journey
-        </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
-          Events & Performances.
-        </h2>
-      </motion.div>
+
 
       <div className='mt-20 flex flex-col text-left'>
         <p className="text-black text-center mb-8 text-2xl font-bold">
