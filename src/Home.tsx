@@ -23,9 +23,9 @@ const Home: React.FC = () => {
             <a href="https://www.instagram.com/lx_mania_lx/" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="w-full h-9 hover:text-gray-600" />
             </a>
-            <a href="https://www.art-mate.net/doc/75292?name=%E9%99%B3%E6%BE%A4%E9%8A%98" target="_blank" rel="noopener noreferrer">
-              <img src={artmate} alt="Artstation" className="w-15 h-9 hover:opacity-80" />
-            </a>
+            <button onClick={() => window.open("https://www.art-mate.net/doc/75292?name=%E9%99%B3%E6%BE%A4%E9%8A%98", "_blank")} className="focus:outline-none font-bold underline text-black hover:text-white rounded">
+              Artmate
+            </button>
           </div>
 
         </section>
