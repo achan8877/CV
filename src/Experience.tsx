@@ -8,6 +8,8 @@ import SectionWrapper from "./hoc/SectionWrapper";
 import { textVariant } from "./utils/motion";
 import lightbulb from './assets/lightbulb.png'; // 根據你的實際路徑調整
 import './AboutMe.css';
+import { useNavigate } from 'react-router-dom';
+
 interface Event {
   date: string;
   title: string;
@@ -39,6 +41,11 @@ const EventCard: React.FC<{ event: Event; position: string }> = ({ event, positi
 };
 
 const About = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/'); // Replace '/' with your desired path
+  };
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -54,6 +61,11 @@ const About = () => {
         <p className="text-black text-center mb-8 text-2xl font-bold">
           近年演出經驗
         </p>
+        <button
+          onClick={handleButtonClick}
+          className="absolute font-bold left-4 px-4 py-2  text-black hover:text-white rounded  underline">
+          Back to Home
+        </button>
         <h3 className='text-xl font-bold mb-4 text-center'>Drama</h3>
         <VerticalTimeline  className="vertical-timeline-custom-line left-timeline">
           {drama.map((event, index) => (
