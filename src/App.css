@@ -1,54 +1,52 @@
-/* src/App.css */
 body {
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../public/cuhkJP24/cuhkJP24_5.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.8; /* Adjust this value to change the transparency */
-    z-index: -1; /* Ensure the background is behind all content */
-    will-change: opacity;
-  }
-  /* src/App.css */
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../public/cuhkJP24/cuhkJP24_5.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  z-index: -1;
+  will-change: opacity;
+}
+
 .main-content {
-    padding-top: 100px; /* 根據導航欄的高度調整這個值 */
-    max-height: calc(100vh - 100px);
-  }
-  /* src/App.css */
+  padding-top: 100px; /* 根據導航欄的高度調整這個值 */
+  max-height: calc(100vh - 100px);
+  overflow-y: auto; /* 只需要垂直滾動 */
+}
+
 .bg-primary {
-    background-color: #FFFFE0; /* 金黃色 */
-  }
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-width: 100%;
-    max-height: 100vh; /* 限制高度以適應視窗 */
-  }
-  
-  .scrollable {
-    overflow-x: auto; /* Enables horizontal scrolling */
-    overflow-y: auto; /* Enables vertical scrolling */
-    max-height: 100vh; /* Adjust the height as needed */
-    max-width: 100%; /* Adjust the width as needed */
-    top:auto
-  }
-  
-  .timeline-image {
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
-  }
-  
+  background-color: #FFFFE0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.scrollable {
+  overflow-y: auto;
+  max-height: 100vh;
+  max-width: 100%;
+}
+
+.timeline-image {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
