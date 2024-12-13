@@ -65,7 +65,6 @@ img {
   align-items: center;
   z-index: 1000;
   opacity: 0.8;
-
 }
 
 .loading-text {
@@ -75,9 +74,9 @@ img {
 
 .loading-bar {
   width: 80%;
-  height: 10px;
+  height: 20px; /* Adjusted height for better visibility */
   background: #444;
-  border-radius: 5px;
+  border-radius: 10px; /* Updated border radius */
   overflow: hidden;
 }
 
@@ -85,4 +84,6 @@ img {
   height: 100%;
   background: #00ff00;
   transition: width 0.1s ease-in-out;
+  border-radius: 10px; /* Updated border radius */
 }
+
