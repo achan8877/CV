@@ -8,25 +8,46 @@ const Image: React.FC = () => {
   const navigate = useNavigate();
   const project = imageFolders[projectId || ''];
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
   const title = project?.title || 'Unknown';
   const images = project?.images || [];
   const projectCategory = project?.category || 'Unknown';
 
-  // Preload images
+  // Preload images with progress tracking
   useEffect(() => {
-    const preloadImages = () => {
-      images.forEach((image) => {
-        const img = new window.Image();
-        img.src = image;
-      });
+    let loadedCount = 0;
+
+    const handleImageLoad = () => {
+      loadedCount += 1;
+      setLoadingProgress((loadedCount / images.length) * 100);
+
+      if (loadedCount === images.length) {
+        setIsLoaded(true);
+      }
     };
-  
-    preloadImages();
+
+    images.forEach((image) => {
+      const img = new window.Image();
+      img.src = image;
+      img.onload = handleImageLoad;
+    });
   }, [images]);
-  
+
   const closeModal = () => {
     setSelectedImage(null);
   };
+
+  if (!isLoaded) {
+    return (
+      <div className="loading-screen">
+        <div className="loading-text">Loading... {Math.round(loadingProgress)}%</div>
+        <div className="loading-bar">
+          <div className="loading-progress" style={{ width: `${loadingProgress}%` }} />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="p-4">

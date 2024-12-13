@@ -64,6 +64,8 @@ img {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  opacity: 0.8;
+
 }
 
 .loading-text {
