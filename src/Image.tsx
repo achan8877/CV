@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './App.css';
 import imageFolders from './data/imageFolders';
 
 const Image: React.FC = () => {
-  const { category, projectId } = useParams<{ category: string; projectId: string }>(); // Extract parameters
+  const { category, projectId } = useParams<{ category: string; projectId: string }>();
   const navigate = useNavigate();
   const project = imageFolders[projectId || ''];
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -12,16 +12,27 @@ const Image: React.FC = () => {
   const images = project?.images || [];
   const projectCategory = project?.category || 'Unknown';
 
+  // Preload images
+  useEffect(() => {
+    const preloadImages = () => {
+      images.forEach((image) => {
+        const img = new window.Image();
+        img.src = image;
+      });
+    };
+  
+    preloadImages();
+  }, [images]);
+  
   const closeModal = () => {
     setSelectedImage(null);
   };
 
   return (
     <div className="p-4">
-      {/* Back Button */}
       <button
         className="absolute left-4 px-4 py-2 text-black hover:text-white rounded underline"
-        onClick={() => navigate(`/Gallery/${category}`)} // Navigate back to the category
+        onClick={() => navigate(`/Gallery/${category}`)}
       >
         Back to {category} Gallery
       </button>
@@ -49,7 +60,6 @@ const Image: React.FC = () => {
         ))}
       </div>
 
-      {/* Modal for magnified image */}
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
