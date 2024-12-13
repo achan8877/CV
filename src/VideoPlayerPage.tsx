@@ -27,6 +27,7 @@ const VideoPlayerPage: React.FC = () => {
     };
 
     const handleCanPlayThrough = () => {
+      setLoadingProgress(100);
       setIsLoaded(true);
     };
 
