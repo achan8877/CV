@@ -1,20 +1,16 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import Navbar from './Navbar';
-import Videos from './Videos';// Lazy load components
-import VideoPlayerPage from './VideoPlayerPage';
+
 const LazyHome = React.lazy(() => import('./Home'));
 const LazyGallery = React.lazy(() => import('./Gallery'));
 const LazyImage = React.lazy(() => import('./Image'));
 const LazyVideoGallery = React.lazy(() => import('./VideoGallery'));
 const LazyExperience = React.lazy(() => import('./Experience'));
-const LazyVideos = React.lazy(() => import('./Videos'));
-const LazyVideoPlayerPage = React.lazy(() => import('./VideoPlayerPage'));
 const LazyGalleryNavigation = React.lazy(() => import('./GalleryNavigation'));
-const LoadingFallback = () => (
-  <div className="loading">Loading...</div>
-);
+const LazyVideoPlayerPage = React.lazy(() => import('./VideoPlayerPage'));
+
 // ScrollToTop component
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -32,25 +28,63 @@ const ScrollToTop = () => {
   return null;
 };
 
+// Loading component with percentage
+const LoadingWithPercentage: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          onComplete(); // Call the callback when loading is complete
+          return 100;
+        }
+        return prev + 10; // Increment progress (adjust speed here)
+      });
+    }, 100); // Adjust interval time for smoother or faster progress
+
+    return () => clearInterval(interval);
+  }, [onComplete]);
+
+  return (
+    <div className="loading-screen">
+      <div className="loading-text">Loading... {progress}%</div>
+      <div className="loading-bar">
+        <div className="loading-progress" style={{ width: `${progress}%` }} />
+      </div>
+    </div>
+  );
+};
+
 const App: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false); // Stop showing the loading screen
+  };
+
   return (
     <Router>
       <Navbar />
       <ScrollToTop />
-
-      <div className="main-content scrollable">
-        <Suspense fallback={<LoadingFallback />}>
-          <Routes>
-            <Route path="/" element={<LazyHome />} />
-            <Route path="/Gallery" element={<LazyGalleryNavigation/>} />
-            <Route path = "/Gallery/:category" element = {<LazyGallery/>}/>
-            <Route path="/Gallery/:category/:projectId" element={<LazyImage />} />
-            <Route path="/Video" element={<LazyVideoGallery />} /> {/* 不需要傳遞空屬性 */}
-            <Route path="/Video/:id" element={<LazyVideoPlayerPage />} />
-            <Route path="/Experience" element={<LazyExperience />} />
-          </Routes>
-        </Suspense>
-      </div>
+      {isLoading ? (
+        <LoadingWithPercentage onComplete={handleLoadingComplete} />
+      ) : (
+        <div className="main-content scrollable">
+          <Suspense fallback={<div className="loading">Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<LazyHome />} />
+              <Route path="/Gallery" element={<LazyGalleryNavigation />} />
+              <Route path="/Gallery/:category" element={<LazyGallery />} />
+              <Route path="/Gallery/:category/:projectId" element={<LazyImage />} />
+              <Route path="/Video" element={<LazyVideoGallery />} />
+              <Route path="/Video/:id" element={<LazyVideoPlayerPage />} />
+              <Route path="/Experience" element={<LazyExperience />} />
+            </Routes>
+          </Suspense>
+        </div>
+      )}
     </Router>
   );
 };

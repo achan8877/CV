@@ -50,3 +50,37 @@ img {
   height: 50px;
   margin-left: 10px;
 }
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading-text {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.loading-bar {
+  width: 80%;
+  height: 10px;
+  background: #444;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.loading-progress {
+  height: 100%;
+  background: #00ff00;
+  transition: width 0.1s ease-in-out;
+}
