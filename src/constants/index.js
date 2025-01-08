@@ -32,7 +32,7 @@ import YoasobiTw from '../assets/video/YoasobiTw.png'
 
   export const drama = [
     {
-      title: "Singingholic《鬼屋搞笑實錄》",
+      title: "singingholic《鬼屋搞笑實錄》",
       date: "3-5/1/2025",
       icon: lightbulb,
 
