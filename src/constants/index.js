@@ -32,6 +32,12 @@ import YoasobiTw from '../assets/video/YoasobiTw.png'
 
   export const drama = [
     {
+      title: "Singingholic《鬼屋搞笑實錄》",
+      date: "3-5/1/2025",
+      icon: lightbulb,
+
+    },
+    {
       title: "農圃劇團《念念不忘》",
       date: "12-13/12/2024",
       icon: lightbulb,
